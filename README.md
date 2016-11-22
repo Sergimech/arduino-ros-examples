@@ -1,4 +1,4 @@
-# arduino-ros-examples
+﻿# arduino-ros-examples
 Set of examples of to learn the interface between ROS and Arduino
 
 ## Dependecies
@@ -24,3 +24,26 @@ $ rosrun rosserial_arduino make_libraries.py .
 ```shell 
 $ roslaunch arduino_ros_examples oscillator.launch
 ```
+
+Configurable frequency in a sine wave
+
+There is a new file, called oscillator_configurable.ino, which is the same of old file but in this, you can configure the frequency in real time with a simple command on a new terminal.
+
+1- Verify and upload the new code on Arduino IDE
+
+2- Run the launch file:
+
+$ roslaunch arduino_ros_examples oscillator.launch
+
+(Default value of frequency is 50Hz)
+
+3- Then, you can see the sine wave plot in rqt, if you not see this, write on form:
+
+/wave/data
+
+4- If you want to change frequency value, substitute <frequency> in a new value:
+
+$ rostopic pub /freq std_msgs/UInt16 <frequency>
+
+And then, the plot changes automatically the frequency sine wave.
+
