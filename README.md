@@ -25,7 +25,7 @@ $ rosrun rosserial_arduino make_libraries.py .
 $ roslaunch arduino_ros_examples oscillator.launch
 ```
 
-Configurable frequency in a sine wave
+### Configurable frequency in a sine wave
 
 There is a new file, called oscillator_configurable.ino, which is the same of old file but in this, you can configure the frequency in real time with a simple command on a new terminal.
 
